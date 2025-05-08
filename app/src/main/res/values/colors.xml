@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные цвета -->
+    <color name="primary">#4CAF50</color>
+    <color name="primary_variant">#388E3C</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="secondary">#FF9800</color>
+    <color name="secondary_variant">#F57C00</color>
+    
+    <!-- Цвета текста и фона -->
+    <color name="background_light">#FFFFFF</color>
+    <color name="background_dark">#121212</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="text_primary_light">#212121</color>
+    <color name="text_secondary_light">#757575</color>
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#B3B3B3</color>
+    
+    <!-- Цвета обратной связи -->
+    <color name="error">#F44336</color>
+    <color name="success">#4CAF50</color>
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="info">#2196F3</color>
+    
+    <!-- Цвета категорий -->
+    <color name="category_animals">#4CAF50</color>
+    <color name="category_plants">#8BC34A</color>
+    <color name="category_space">#3F51B5</color>
+    <color name="category_science">#FF9800</color>
+    <color name="category_history">#9C27B0</color>
+    <color name="category_geography">#2196F3</color>
+    <color name="category_literature">#795548</color>
+    <color name="category_art">#E91E63</color>
+    <color name="category_technology">#607D8B</color>
+    
+    <!-- Цвета уровней достижений -->
+    <color name="achievement_bronze">#CD7F32</color>
+    <color name="achievement_silver">#C0C0C0</color>
+    <color name="achievement_gold">#FFD700</color>
+    <color name="achievement_platinum">#E5E4E2</color>
+    
+    <!-- Другие стандартные цвета Android -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Тени и прозрачные цвета -->
+    <color name="shadow">#25000000</color>
+    <color name="scrim">#52000000</color>
+    <color name="overlay_light">#80FFFFFF</color>
+    <color name="overlay_dark">#80000000</color>
+    
+    <!-- Добавляю цвета для ролей пользователей -->
+    <color name="admin_color">#FFF44336</color> <!-- Красный -->
+    <color name="editor_color">#FF9C27B0</color> <!-- Фиолетовый -->
+    <color name="user_color">#FF2196F3</color> <!-- Синий -->
+</resources>

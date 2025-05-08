@@ -1,0 +1,348 @@
+<resources>
+    <string name="app_name">Детская энциклопедия</string>
+    
+    <!-- Общие строки -->
+    <string name="loading">Загрузка…</string>
+    <string name="error">Ошибка</string>
+    <string name="success">Успешно</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="delete">Удалить</string>
+    <string name="edit">Редактировать</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="search">Поиск</string>
+    <string name="search_hint">Введите текст для поиска</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="ok">OK</string>
+    <string name="send">Отправить</string>
+    <string name="error_empty_field">Это поле обязательно для заполнения</string>
+    
+    <!-- Строки для навигации -->
+    <string name="nav_home">Главная</string>
+    <string name="home">Главная</string>
+    <string name="nav_categories">Категории</string>
+    <string name="nav_bookmarks">Закладки</string>
+    <string name="nav_quizzes">Викторины</string>
+    <string name="nav_achievements">Достижения</string>
+    <string name="nav_profile">Профиль</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="nav_assistant">Помощник</string>
+    
+    <!-- Строки для авторизации и регистрации -->
+    <string name="login">Вход</string>
+    <string name="register">Регистрация</string>
+    <string name="logout">Выйти</string>
+    <string name="email">Email</string>
+    <string name="password">Пароль</string>
+    <string name="confirm_password">Подтвердите пароль</string>
+    <string name="name">Имя</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="login_error">Ошибка входа. Проверьте email и пароль.</string>
+    <string name="no_account">Нет аккаунта?</string>
+    <string name="already_have_account">Уже есть аккаунт?</string>
+    <string name="registration_success">Регистрация прошла успешно!</string>
+    <string name="registration_error">Ошибка регистрации. Попробуйте еще раз.</string>
+    <string name="error_field_required">Это поле обязательно</string>
+    <string name="error_invalid_email">Неверный формат email</string>
+    <string name="error_password_too_short">Пароль должен содержать минимум %d символов</string>
+    <string name="password_mismatch">Пароли не совпадают</string>
+    <string name="email_already_exists">Пользователь с таким email уже существует</string>
+    
+    <!-- Строки для категорий -->
+    <string name="categories">Категории</string>
+    <string name="category_details">Подробно о категории</string>
+    <string name="no_categories">Категории отсутствуют</string>
+    <string name="add_category">Добавить категорию</string>
+    <string name="category_name">Название категории</string>
+    <string name="category_description">Описание категории</string>
+    <string name="category_color">Цвет категории</string>
+    <string name="category_icon">Иконка категории</string>
+    <string name="entries_count">%1$d статей</string>
+    <string name="explore_categories">Просмотреть категории</string>
+    <string name="confirm_delete_category">Вы уверены, что хотите удалить категорию \"%1$s\"?</string>
+    <string name="category_deleted">Категория \"%1$s\" успешно удалена</string>
+    <string name="error_delete_category">Ошибка при удалении категории: %1$s</string>
+    <string name="edit_category">Редактировать категорию</string>
+    <string name="category_color_hex">Цвет категории (HEX, например, #RRGGBB)</string>
+    <string name="category_icon_name">Название иконки (для drawable)</string>
+    <string name="category_saved">Категория сохранена</string>
+    <string name="error_saving_category">Ошибка сохранения категории: %1$s</string>
+    <string name="invalid_color_hex">Неверный HEX код цвета</string>
+    
+    <!-- Категории -->
+    <string name="category_animals">Животные</string>
+    <string name="category_plants">Растения</string>
+    <string name="category_space">Космос</string>
+    <string name="category_history">История</string>
+    <string name="category_technology">Технологии</string>
+    <string name="category_science">Наука</string>
+    
+    <!-- Строки для статей -->
+    <string name="entries">Статьи</string>
+    <string name="entry_details">Содержание статьи</string>
+    <string name="no_entries">Статьи отсутствуют</string>
+    <string name="add_entry">Добавить статью</string>
+    <string name="edit_entry">Редактировать статью</string>
+    <string name="entry_title">Заголовок статьи</string>
+    <string name="entry_content">Содержание статьи</string>
+    <string name="entry_summary">Краткое описание</string>
+    <string name="entry_image">Изображение для статьи</string>
+    <string name="entry_saved">Статья сохранена</string>
+    <string name="mark_as_read">Отметить как прочитанное</string>
+    <string name="mark_as_unread">Отметить как непрочитанное</string>
+    <string name="entry_read">Прочитано</string>
+    <string name="entry_unread">Не прочитано</string>
+    <string name="confirm_delete">Подтверждение удаления</string>
+    <string name="confirm_delete_entry">Вы уверены, что хотите удалить статью \"%1$s\"?</string>
+    <string name="select_category">Выберите категорию</string>
+    <string name="more_options">Дополнительные опции</string>
+    <string name="field_required">Это поле обязательно для заполнения</string>
+    
+    <!-- Строки для викторин -->
+    <string name="quizzes">Викторины</string>
+    <string name="no_quizzes">Нет доступных викторин</string>
+    <string name="no_quizzes_found">Викторины не найдены</string>
+    <string name="quiz_hint">Проверьте свои знания с помощью интересных викторин</string>
+    <string name="quiz_details">Информация о викторине</string>
+    <string name="quiz_icon">Иконка викторины</string>
+    <string name="related_article">Связанная статья</string>
+    <string name="related_entry">Связанная статья</string>
+    <string name="no_related_article">Нет связанной статьи</string>
+    <string name="view_article">Просмотреть статью</string>
+    <string name="start_quiz">Начать викторину</string>
+    <string name="next_question">Следующий вопрос</string>
+    <string name="submit_answer">Ответить</string>
+    <string name="question">Вопрос %1$d из %2$d</string>
+    <string name="quiz_completed">Викторина завершена!</string>
+    <string name="your_score">Ваш результат: %1$d/%2$d</string>
+    <string name="congratulations">Поздравляем!</string>
+    <string name="try_again">Пройти еще раз</string>
+    <string name="back_to_quizzes">К списку викторин</string>
+    <string name="time_remaining">Осталось времени: %1$d</string>
+    <string name="add_quiz">Добавить викторину</string>
+    <string name="edit_quiz">Редактировать викторину</string>
+    <string name="create_quiz">Создать викторину</string>
+    <string name="add_question">Добавить вопрос</string>
+    <string name="add_answer">Добавить вариант ответа</string>
+    <string name="correct_answer">Правильный ответ</string>
+    <string name="incorrect_answer">Неправильный ответ</string>
+    <string name="quiz">Викторина</string>
+    <string name="quiz_title">Название викторины</string>
+    <string name="quiz_description">Описание викторины</string>
+    <string name="quiz_questions">Вопросы викторины</string>
+    <string name="question_count">Вопросов: %1$d</string>
+    <string name="edit_questions_after_save">Вы сможете добавить вопросы после сохранения викторины</string>
+    <string name="quiz_results">Результаты викторины</string>
+    <string name="quiz_created">Викторина успешно создана</string>
+    <string name="quiz_updated">Викторина успешно обновлена</string>
+    <string name="quiz_deleted">Викторина \"%1$s\" успешно удалена</string>
+    <string name="error_delete_quiz">Ошибка при удалении викторины: %1$s</string>
+    <string name="confirm_delete_quiz">Вы уверены, что хотите удалить викторину \"%1$s\"?</string>
+    <string name="quiz_not_found">Викторина не найдена</string>
+    <string name="error_loading_data">Ошибка загрузки данных: %1$s</string>
+    <string name="error_select_entry">Выберите связанную статью</string>
+    <string name="error_entry_not_found">Выбранная статья не найдена</string>
+    <string name="more_actions">Дополнительные действия</string>
+    <string name="back">Назад</string>
+    
+    <!-- Строки для закладок -->
+    <string name="bookmarks">Закладки</string>
+    <string name="add_bookmark">Добавить в закладки</string>
+    <string name="remove_bookmark">Удалить из закладок</string>
+    <string name="bookmark_added">Добавлено в закладки</string>
+    <string name="bookmark_removed">Удалено из закладок</string>
+    <string name="no_bookmarks">Нет закладок</string>
+    <string name="bookmark_hint">Используйте закладки, чтобы сохранять интересные статьи и иметь к ним быстрый доступ</string>
+    <string name="bookmark">Закладка</string>
+    
+    <!-- Строки для комментариев -->
+    <string name="comments">Комментарии</string>
+    <string name="add_comment">Добавить комментарий</string>
+    <string name="edit_comment">Изменить комментарий</string>
+    <string name="delete_comment">Удалить комментарий</string>
+    <string name="comment_hint">Напишите комментарий…</string>
+    <string name="enter_comment">Введите комментарий</string>
+    <string name="empty_comment_error">Комментарий не может быть пустым</string>
+    <string name="comment_sent_success">Комментарий успешно отправлен</string>
+    <string name="no_comments">Нет комментариев</string>
+    <string name="be_first_to_comment">Будьте первым, кто оставит комментарий!</string>
+    <string name="be_first_comment">Будьте первым, кто оставит комментарий к этой статье</string>
+    <string name="user_avatar">Аватар пользователя</string>
+    <string name="view_all_comments">Показать все комментарии</string>
+    <string name="confirm_delete_comment_message">Вы уверены, что хотите удалить этот комментарий?</string>
+    
+    <!-- Строки для достижений -->
+    <string name="achievements">Достижения</string>
+    <string name="achievement_unlocked">Достижение разблокировано!</string>
+    <string name="achievement_progress">Прогресс: %1$d/%2$d</string>
+    <string name="no_achievements">У вас пока нет достижений</string>
+    <string name="locked_achievements">Заблокированные достижения</string>
+    <string name="unlocked_achievements">Разблокированные достижения</string>
+    <string name="achievement_hint">Выполняйте задания и читайте статьи, чтобы получать новые достижения</string>
+    <string name="achievement_icon">Иконка достижения</string>
+    <string name="achievement_completed">Достижение выполнено</string>
+    <string name="achievement_completed_date">Получено: %1$s</string>
+    <string name="achievement_points">+%1$d очков</string>
+    <string name="xp_format">%1$d XP</string>
+    <string name="total_achievements">Всего достижений: %1$d/%2$d</string>
+    <string name="progress_format">%1$d/%2$d</string>
+    <string name="achievements_all">ВСЕ</string>
+    <string name="reading_achievements">ЧТЕНИЕ</string>
+    <string name="quiz_achievements">ТЕСТЫ</string>
+    <string name="social_achievements">СОЦИАЛЬНЫЕ</string>
+    <string name="achievement_details_message">Детали достижения: %1$s</string>
+    <string name="achievement_already_completed">Достижение \"%1$s\" уже выполнено!</string>
+    <string name="achievement_just_completed">Поздравляем! Вы выполнили достижение \"%1$s\"!</string>
+    <string name="achievement_progress_incremented">Прогресс достижения \"%1$s\": %2$d/%3$d (%4$d%%)</string>
+    
+    <!-- Строки для профиля пользователя -->
+    <string name="profile">Профиль</string>
+    <string name="edit_profile">Редактировать профиль</string>
+    <string name="change_password">Изменить пароль</string>
+    <string name="current_password">Текущий пароль</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="confirm_new_password">Подтвердите новый пароль</string>
+    <string name="profile_updated">Профиль обновлен</string>
+    <string name="password_updated">Пароль изменен</string>
+    <string name="profile_picture">Фото профиля</string>
+    <string name="change_picture">Изменить фото</string>
+    <string name="reading_progress">Прогресс чтения</string>
+    <string name="overall_progress">Общий прогресс: %1$.1f%%</string>
+    <string name="category_progress">Прогресс по категориям</string>
+    <string name="category_progress_format">Прочитано: %1$d%%</string>
+    <string name="activity_icon">Иконка активности</string>
+    <string name="recent_activities">Последние активности</string>
+    <string name="read_entries_count">Прочитано статей: %1$d из %2$d</string>
+    <string name="completed_quizzes_count">Пройдено викторин: %1$d из %2$d</string>
+    <string name="earned_achievements_count">Получено достижений: %1$d из %2$d</string>
+    <string name="progress_percent">%1$d%%</string>
+    <string name="read_entries_in_category">Прочитано %1$d из %2$d статей</string>
+    <string name="activity_read_entry">Прочитана статья \"%1$s\"</string>
+    <string name="activity_completed_quiz">Пройдена викторина \"%1$s\"</string>
+    <string name="activity_earned_achievement">Получено достижение \"%1$s\"</string>
+    <string name="activity_bookmarked_entry">Добавлена закладка \"%1$s\"</string>
+    <string name="activity_commented_entry">Оставлен комментарий к статье \"%1$s\"</string>
+    <string name="time_ago_just_now">Только что</string>
+    <string name="time_ago_minute">%1$d минуту назад</string>
+    <string name="time_ago_minutes">%1$d минут назад</string>
+    <string name="time_ago_hour">%1$d час назад</string>
+    <string name="time_ago_hours">%1$d часов назад</string>
+    <string name="time_ago_day">%1$d день назад</string>
+    <string name="time_ago_days">%1$d дней назад</string>
+    <string name="password_requirements">Пароль должен содержать не менее 8 символов, включая буквы верхнего и нижнего регистра, цифры и специальные символы</string>
+    
+    <!-- Новые строки для редактирования профиля и смены пароля -->
+    <string name="profile_updated_successfully">Профиль успешно обновлен</string>
+    <string name="password_changed_successfully">Пароль успешно изменен</string>
+    
+    <!-- Строки для настроек -->
+    <string name="settings">Настройки</string>
+    <string name="theme">Тема оформления</string>
+    <string name="dark_theme">Темная тема</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="system_theme">Системная тема</string>
+    <string name="text_size">Размер текста</string>
+    <string name="small">Маленький</string>
+    <string name="medium">Средний</string>
+    <string name="large">Большой</string>
+    <string name="notifications">Уведомления</string>
+    <string name="enable_notifications">Включить уведомления</string>
+    <string name="about">О приложении</string>
+    <string name="version">Версия: %1$s</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+    <string name="terms_of_use">Условия использования</string>
+    
+    <!-- Строки для администратора -->
+    <string name="admin_panel">Админ-панель</string>
+    <string name="admin">Администратор</string>
+    <string name="content_management">Управление контентом</string>
+    <string name="content_management_desc">Создание, редактирование и удаление статей, категорий и викторин</string>
+    <string name="user_management">Управление пользователями</string>
+    <string name="user_management_desc">Просмотр и управление учетными записями пользователей</string>
+    <string name="tag_management">Управление тегами</string>
+    <string name="tag_management_desc">Создание, редактирование и удаление тегов</string>
+    <string name="analytics">Аналитика и статистика</string>
+    <string name="analytics_desc">Просмотр статистики использования приложения</string>
+    <string name="manage_users">Управление пользователями</string>
+    <string name="manage_categories">Управление категориями</string>
+    <string name="manage_entries">Управление статьями</string>
+    <string name="manage_quizzes">Управление викторинами</string>
+    <string name="manage_achievements">Управление достижениями</string>
+    <string name="user_details">Данные пользователя</string>
+    <string name="user_role">Роль пользователя</string>
+    <string name="role_user">Пользователь</string>
+    <string name="role_admin">Администратор</string>
+    <string name="block_user">Заблокировать пользователя</string>
+    <string name="unblock_user">Разблокировать пользователя</string>
+    <string name="reset_password">Сбросить пароль</string>
+    <string name="statistics">Статистика</string>
+    <string name="users_count">Количество пользователей: %1$d</string>
+    
+    <!-- Строки для оффлайн-режима -->
+    <string name="offline_mode">Оффлайн-режим</string>
+    <string name="no_internet">Нет подключения к интернету</string>
+    <string name="offline_content">Доступный оффлайн контент</string>
+    <string name="save_offline">Сохранить для оффлайн-доступа</string>
+    <string name="remove_from_offline">Удалить из оффлайн-хранилища</string>
+    
+    <!-- Строки для обмена -->
+    <string name="share">Поделиться</string>
+    <string name="share_entry">Поделиться статьей</string>
+    <string name="share_text">Посмотри интересную статью "%1$s" в приложении "Детская энциклопедия"!</string>
+    
+    <!-- Строки для поиска -->
+    <string name="filter_by_category">По категории</string>
+    <string name="filter_by_tag">По тегу</string>
+    <string name="filter_unread">Непрочитанное</string>
+    <string name="no_results_found">Ничего не найдено</string>
+    <string name="search_in_progress">Поиск...</string>
+    <string name="search_results">Результаты поиска: %1$d</string>
+    <string name="match_title_exact">Точное совпадение в заголовке</string>
+    <string name="match_title_partial">Частичное совпадение в заголовке</string>
+    <string name="match_content_exact">Точное совпадение в тексте</string>
+    <string name="match_content_partial">Частичное совпадение в тексте</string>
+    <string name="match_tag">Совпадение по тегу</string>
+    <string name="match_category">Совпадение по категории</string>
+    <string name="admin_access_denied">Доступ разрешен только администраторам</string>
+    
+    <!-- Admin Panel -->
+    <string name="add_new">Добавить</string>
+    
+    <!-- Строки для интерактивных элементов -->
+    <string name="video_content">Видео</string>
+    <string name="video_loading_error">Ошибка загрузки видео</string>
+
+    <!-- Placeholder Strings -->
+    <string name="error_passwords_dont_match">Пароли не совпадают</string>
+    <string name="role_editor">Редактор</string>
+    <string name="questions">Вопросы</string>
+    <string name="answer_variant">Вариант ответа</string>
+    <string name="answer_correct">Правильный</string>
+    <string name="delete_answer">Удалить вариант ответа</string>
+    <string name="answers">Варианты ответов</string>
+    <string name="question_text">Текст вопроса</string>
+    <string name="new_question">Новый вопрос</string>
+    <string name="edit_question">Редактирование вопроса</string>
+    <string name="question_added">Вопрос добавлен</string>
+    <string name="question_updated">Вопрос и варианты ответов обновлены</string>
+    <string name="error_empty_question">Текст вопроса не может быть пустым</string>
+    <string name="error_no_answers">Добавьте хотя бы один вариант ответа</string>
+    <string name="error_no_correct_answer">Отметьте хотя бы один правильный ответ</string>
+    <string name="error_empty_answer">Текст варианта ответа не может быть пустым</string>
+    <string name="error_add_question">Ошибка добавления вопроса: %1$s</string>
+    <string name="like">Нравится</string>
+    <string name="unlike">Не нравится</string>
+    <string name="likes_format">%d лайков</string>
+    <string name="comments_format">%d комментариев</string>
+
+    <!-- Строки для помощника -->
+    <string name="assistant">AI-помощник</string>
+    <string name="assistant_greeting">Привет! Я твой AI-помощник по энциклопедии природы. Что ты хочешь узнать?</string>
+    <string name="message_hint">Напишите сообщение…</string>
+    <string name="send_message">Отправить сообщение</string>
+    <string name="ai_is_typing">AI печатает…</string>
+    <string name="assistant_error">Ошибка при получении ответа</string>
+    <string name="assistant_retry">Повторить</string>
+    <string name="assistant_clear">Очистить историю</string>
+</resources>

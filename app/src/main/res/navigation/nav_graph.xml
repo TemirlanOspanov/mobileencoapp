@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Фрагмент входа (логин) -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myworldapp2.ui.fragment.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Фрагмент регистрации -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.myworldapp2.ui.fragment.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Домашний фрагмент (главный экран приложения) -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myworldapp2.ui.fragment.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_entryDetailFragment"
+            app:destination="@id/entryDetailFragment" />
+    </fragment>
+
+    <!-- Категории -->
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.myworldapp2.ui.fragment.CategoriesFragment"
+        android:label="@string/nav_categories"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_categoriesFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+    </fragment>
+
+    <!-- Детальная страница категории -->
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="com.example.myworldapp2.ui.fragment.CategoryDetailFragment"
+        android:label="@string/category_details"
+        tools:layout="@layout/fragment_category_detail">
+        <argument
+            android:name="categoryId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_categoryDetailFragment_to_entryDetailFragment"
+            app:destination="@id/entryDetailFragment" />
+    </fragment>
+
+    <!-- Детальная страница статьи -->
+    <fragment
+        android:id="@+id/entryDetailFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EntryDetailFragment"
+        android:label="@string/entry_details"
+        tools:layout="@layout/fragment_entry_detail">
+        <argument
+            android:name="entryId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_entryDetailFragment_to_commentsFragment"
+            app:destination="@id/commentsFragment" />
+        <action
+            android:id="@+id/action_entryDetailFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+
+    <!-- Закладки -->
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="com.example.myworldapp2.ui.fragment.BookmarksFragment"
+        android:label="@string/nav_bookmarks"
+        tools:layout="@layout/fragment_bookmarks">
+        <action
+            android:id="@+id/action_bookmarksFragment_to_entryDetailFragment"
+            app:destination="@id/entryDetailFragment" />
+    </fragment>
+
+    <!-- Викторины -->
+    <fragment
+        android:id="@+id/quizzesFragment"
+        android:name="com.example.myworldapp2.ui.fragment.QuizzesFragment"
+        android:label="@string/nav_quizzes"
+        tools:layout="@layout/fragment_quizzes">
+        <action
+            android:id="@+id/action_quizzesFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+
+    <!-- Викторина -->
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.myworldapp2.ui.fragment.QuizFragment"
+        android:label="@string/quiz_title"
+        tools:layout="@layout/fragment_quiz">
+        <argument
+            android:name="quizId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_quizFragment_to_quizResultFragment"
+            app:destination="@id/quizResultFragment" />
+    </fragment>
+
+    <!-- Результаты викторины -->
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="com.example.myworldapp2.ui.fragment.QuizResultFragment"
+        android:label="@string/quiz_results"
+        tools:layout="@layout/fragment_quiz_result">
+        <argument
+            android:name="quizId"
+            app:argType="long" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
+            android:name="totalQuestions"
+            app:argType="integer" />
+    </fragment>
+
+    <!-- Достижения -->
+    <fragment
+        android:id="@+id/achievementsFragment"
+        android:name="com.example.myworldapp2.ui.fragment.AchievementsFragment"
+        android:label="@string/nav_achievements"
+        tools:layout="@layout/fragment_achievements" />
+
+    <!-- Профиль -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.myworldapp2.ui.fragment.ProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_entryDetailFragment"
+            app:destination="@id/entryDetailFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_quizDetailFragment"
+            app:destination="@id/quizDetailFragment" />
+    </fragment>
+
+    <!-- Помощник (AI-ассистент) -->
+    <fragment
+        android:id="@+id/assistantFragment"
+        android:name="com.example.myworldapp2.ui.fragment.AssistantFragment"
+        android:label="@string/assistant"
+        tools:layout="@layout/fragment_assistant" />
+
+    <!-- Редактирование профиля -->
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EditProfileFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <!-- Изменение пароля -->
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.myworldapp2.ui.fragment.ChangePasswordFragment"
+        android:label="@string/change_password"
+        tools:layout="@layout/fragment_change_password" />
+
+    <!-- Настройки -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.myworldapp2.ui.fragment.SettingsFragment"
+        android:label="@string/nav_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <!-- Поиск -->
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.myworldapp2.ui.fragment.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_entryDetailFragment"
+            app:destination="@id/entryDetailFragment" />
+    </fragment>
+
+    <!-- Комментарии -->
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.example.myworldapp2.ui.fragment.CommentsFragment"
+        android:label="@string/comments"
+        tools:layout="@layout/fragment_comments">
+        <argument
+            android:name="entryId"
+            app:argType="long" />
+    </fragment>
+
+    <!-- Администрирование (доступно только для админов) -->
+    <fragment
+        android:id="@+id/adminPanelFragment"
+        android:name="com.example.myworldapp2.ui.fragment.AdminPanelFragment"
+        android:label="@string/admin_panel"
+        tools:layout="@layout/fragment_admin_panel">
+        <action
+            android:id="@+id/action_adminPanelFragment_to_contentManagementFragment"
+            app:destination="@id/contentManagementFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_userManagementFragment"
+            app:destination="@id/userManagementFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_tagManagementFragment"
+            app:destination="@id/tagManagementFragment" />
+        <action
+            android:id="@+id/action_adminPanelFragment_to_analyticsFragment"
+            app:destination="@id/analyticsFragment" />
+    </fragment>
+
+    <!-- Управление контентом -->
+    <fragment
+        android:id="@+id/contentManagementFragment"
+        android:name="com.example.myworldapp2.ui.fragment.ContentManagementFragment"
+        android:label="@string/content_management"
+        tools:layout="@layout/fragment_content_management">
+        <action
+            android:id="@+id/action_contentManagementFragment_to_entryEditorFragment"
+            app:destination="@id/entryEditorFragment" />
+        <action
+            android:id="@+id/action_contentManagementFragment_to_categoryEditorFragment"
+            app:destination="@id/categoryEditorFragment" />
+        <action
+            android:id="@+id/action_contentManagementFragment_to_editQuizFragment"
+            app:destination="@id/editQuizFragment" />
+        <action
+            android:id="@+id/action_contentManagementFragment_to_entriesManagementFragment"
+            app:destination="@id/entriesManagementFragment" />
+    </fragment>
+
+    <!-- Управление статьями -->
+    <fragment
+        android:id="@+id/entriesManagementFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EntriesManagementFragment"
+        android:label="@string/manage_entries"
+        tools:layout="@layout/fragment_entries_management">
+        <action
+            android:id="@+id/action_entriesManagementFragment_to_entryEditorFragment"
+            app:destination="@id/entryEditorFragment" />
+    </fragment>
+
+    <!-- Управление категориями (внутри ContentManagementFragment) -->
+    <fragment
+        android:id="@+id/categoriesManagementFragment"
+        android:name="com.example.myworldapp2.ui.fragment.CategoriesManagementFragment"
+        android:label="@string/manage_categories"
+        tools:layout="@layout/fragment_categories_management">
+        <action
+            android:id="@+id/action_categoriesManagementFragment_to_categoryEditorFragment"
+            app:destination="@id/categoryEditorFragment" />
+    </fragment>
+
+    <!-- Редактор статей (добавление/редактирование) -->
+    <fragment
+        android:id="@+id/entryEditorFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EntryEditorFragment"
+        android:label="@string/edit_entry"
+        tools:layout="@layout/fragment_entry_editor">
+        <argument
+            android:name="entryId"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
+
+    <!-- Редактор категорий (добавление/редактирование) -->
+    <fragment
+        android:id="@+id/categoryEditorFragment"
+        android:name="com.example.myworldapp2.ui.fragment.CategoryEditorFragment"
+        android:label="@string/edit_category"
+        tools:layout="@layout/fragment_category_editor">
+        <argument
+            android:name="categoryId"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
+
+    <!-- Редактирование записи -->
+    <fragment
+        android:id="@+id/editEntryFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EditEntryFragment"
+        android:label="@string/edit_entry"
+        tools:layout="@layout/fragment_edit_entry" />
+
+    <!-- Редактирование категории -->
+    <fragment
+        android:id="@+id/editCategoryFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EditCategoryFragment"
+        android:label="@string/category_name"
+        tools:layout="@layout/fragment_edit_category" />
+
+    <!-- Редактирование викторины -->
+    <fragment
+        android:id="@+id/editQuizFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EditQuizFragment"
+        android:label="@string/quiz_title"
+        tools:layout="@layout/fragment_edit_quiz">
+        <argument
+            android:name="quizId"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_editQuizFragment_to_quizQuestionsFragment"
+            app:destination="@id/quizQuestionsFragment" />
+    </fragment>
+
+    <!-- Вопросы викторины -->
+    <fragment
+        android:id="@+id/quizQuestionsFragment"
+        android:name="com.example.myworldapp2.ui.fragment.QuizQuestionsFragment"
+        android:label="@string/quiz_questions"
+        tools:layout="@layout/fragment_quiz_questions">
+        <argument
+            android:name="quizId"
+            app:argType="long" />
+    </fragment>
+
+    <!-- Управление пользователями -->
+    <fragment
+        android:id="@+id/userManagementFragment"
+        android:name="com.example.myworldapp2.ui.fragment.UserManagementFragment"
+        android:label="@string/user_management"
+        tools:layout="@layout/fragment_user_management">
+        <action
+            android:id="@+id/action_userManagementFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+
+    <!-- Редактирование пользователя -->
+    <fragment
+        android:id="@+id/editUserFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EditUserFragment"
+        android:label="@string/user_details"
+        tools:layout="@layout/fragment_edit_user" />
+
+    <!-- Управление тегами -->
+    <fragment
+        android:id="@+id/tagManagementFragment"
+        android:name="com.example.myworldapp2.ui.fragment.TagManagementFragment"
+        android:label="@string/tag_management"
+        tools:layout="@layout/fragment_tag_management">
+        <action
+            android:id="@+id/action_tagManagementFragment_to_editTagFragment"
+            app:destination="@id/editTagFragment" />
+    </fragment>
+
+    <!-- Редактирование тега -->
+    <fragment
+        android:id="@+id/editTagFragment"
+        android:name="com.example.myworldapp2.ui.fragment.EditTagFragment"
+        android:label="@string/tag_management"
+        tools:layout="@layout/fragment_edit_tag" />
+
+    <!-- Аналитика -->
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="com.example.myworldapp2.ui.fragment.AnalyticsFragment"
+        android:label="@string/analytics"
+        tools:layout="@layout/fragment_analytics" />
+
+    <!-- Quiz List Fragment -->
+    <fragment
+        android:id="@+id/quizListFragment"
+        android:name="com.example.myworldapp2.ui.fragment.QuizListFragment"
+        android:label="@string/quizzes"
+        tools:layout="@layout/fragment_quiz_list">
+        <action
+            android:id="@+id/action_quizListFragment_to_quizDetailFragment"
+            app:destination="@id/quizDetailFragment" />
+        <action
+            android:id="@+id/action_quizListFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+
+    <!-- Quiz Detail Fragment -->
+    <fragment
+        android:id="@+id/quizDetailFragment"
+        android:name="com.example.myworldapp2.ui.fragment.QuizDetailFragment"
+        android:label="@string/quiz_details"
+        tools:layout="@layout/fragment_quiz_detail">
+        <argument
+            android:name="quizId"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_quizDetailFragment_to_quizPlayFragment"
+            app:destination="@id/quizPlayFragment" />
+        <action
+            android:id="@+id/action_quizDetailFragment_to_entryDetailFragment"
+            app:destination="@id/entryDetailFragment" />
+    </fragment>
+
+    <!-- Quiz Play Fragment -->
+    <fragment
+        android:id="@+id/quizPlayFragment"
+        android:name="com.example.myworldapp2.ui.fragment.QuizPlayFragment"
+        android:label="@string/quizzes"
+        tools:layout="@layout/fragment_quiz_play">
+        <argument
+            android:name="quizId"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_quizPlayFragment_to_quizResultFragment"
+            app:destination="@id/quizResultFragment"
+            app:popUpTo="@id/quizDetailFragment" />
+    </fragment>
+
+    <!-- Quiz Result Fragment -->
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="com.example.myworldapp2.ui.fragment.QuizResultFragment"
+        android:label="@string/quiz_completed"
+        tools:layout="@layout/fragment_quiz_result">
+        <argument
+            android:name="quizId"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <argument
+            android:name="score"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="totalQuestions"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_quizResultFragment_to_quizPlayFragment"
+            app:destination="@id/quizPlayFragment" />
+        <action
+            android:id="@+id/action_quizResultFragment_to_entryDetailFragment"
+            app:destination="@id/entryDetailFragment" />
+    </fragment>
+
+</navigation> 

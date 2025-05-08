@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Иконка достижения -->
+        <ImageView
+            android:id="@+id/imgAchievementIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/achievement_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_trophy" />
+
+        <!-- Название достижения -->
+        <TextView
+            android:id="@+id/tvAchievementTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgAchievementIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Начинающий читатель" />
+
+        <!-- Описание достижения -->
+        <TextView
+            android:id="@+id/tvAchievementDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgAchievementIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvAchievementTitle"
+            tools:text="Прочитать 5 статей" />
+
+        <!-- Прогресс-бар -->
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressAchievement"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAchievementDescription"
+            app:trackCornerRadius="8dp"
+            app:trackThickness="8dp"
+            tools:progress="60" />
+
+        <!-- Текст прогресса -->
+        <TextView
+            android:id="@+id/tvProgressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressAchievement"
+            tools:text="3/5 выполнено" />
+
+        <!-- Значок выполнения (для завершенных достижений) -->
+        <ImageView
+            android:id="@+id/imgCompleted"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="@string/achievement_completed"
+            android:src="@drawable/ic_check_circle"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorSuccess"
+            tools:visibility="visible" />
+
+        <!-- Дата выполнения (для завершенных достижений) -->
+        <TextView
+            android:id="@+id/tvCompletedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="?android:attr/textColorSecondary"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressAchievement"
+            tools:text="Получено: 5 мая 2023"
+            tools:visibility="visible" />
+
+        <!-- Очки за достижение -->
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/badge_background"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgAchievementIcon"
+            tools:text="+50 XP" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView> 

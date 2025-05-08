@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Количество вопросов в викторине -->
+    <plurals name="question_count">
+        <item quantity="one">%d вопрос</item>
+        <item quantity="few">%d вопроса</item>
+        <item quantity="many">%d вопросов</item>
+        <item quantity="other">%d вопросов</item>
+    </plurals>
+</resources> 
