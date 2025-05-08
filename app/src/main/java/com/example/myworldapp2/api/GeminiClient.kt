@@ -18,7 +18,7 @@ class GeminiClient(private val context: Context? = null) {
     private val TAG = "GeminiClient"
     
     // API ключ Gemini - замените на свой ключ
-    private val apiKey = "AIzaSyBZFPmTCEXHsHX5n2yj3mUTg-H9yydGPjE"
+    private val apiKey = ""
     
     // URL и модель для запроса
     private val baseUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
